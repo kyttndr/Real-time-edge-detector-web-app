@@ -57,7 +57,7 @@ def dice_coef_loss(y_true, y_pred):
 
 
 from keras.models import load_model
-model = load_model('model.h5', custom_objects={"Mongo_loss": Mongo_loss, "K": K, "f1": f1, "tf": tf, "dice_coef_loss": dice_coef_loss})
+model = load_model('/home/ubuntu/Real-time-edge-detector-web-app/model.h5', custom_objects={"Mongo_loss": Mongo_loss, "K": K, "f1": f1, "tf": tf, "dice_coef_loss": dice_coef_loss})
 
 
 
