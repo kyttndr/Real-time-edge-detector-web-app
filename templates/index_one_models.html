@@ -18,10 +18,7 @@
       <div class="row">
         <div class="col-6">
           <p class="demo-title">Final Design</p>
-          <p class="demo-title" style="display: none;">Alternative Design</p>
           <img src="{{ url_for('video_feed') }}" id="final-model" class="demo-img">
-          <img src="{{ url_for('video_feed_alpha') }}" id="alpha-model" class="demo-img" style="display: none;">
-	  <button id="change-model" class="btn btn-outline-primary">Change Model</button>
         </div>
         <div class="col-6">
           <p class="demo-title">Canny Algorithm</p>
@@ -30,14 +27,4 @@
       </div>
     </div>
   </body>
-  <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $('#change-model').click(function(){
-      $(this).parent().find('img').toggle();
-      $(this).parent().find('p').toggle();
-    });
-  </script>
 </html>

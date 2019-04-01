@@ -6,12 +6,12 @@ import io
 import json
 import numpy
 import pickle
-import image_convert_v1
+import image_convert
 import tensorflow as tf
 
 graph = tf.get_default_graph()
 
-class Streamer (threading.Thread):
+class Streamer_alpha (threading.Thread):
   def __init__(self, hostname, port):
     threading.Thread.__init__(self)
 
@@ -69,7 +69,7 @@ class Streamer (threading.Thread):
           frame = frame.reshape(1, 320, 480, 3)
           global graph
           with graph.as_default():
-            frame = image_convert_v1.model.predict(frame)[0]
+            frame = image_convert.model.predict(frame)
           frame = frame.reshape(320, 480)
           frame = frame * 255
 
