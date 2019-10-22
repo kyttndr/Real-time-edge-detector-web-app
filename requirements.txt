@@ -34,7 +34,7 @@ numpy==1.15.4
 opencv-contrib-python==4.0.0.21
 pathspec==0.5.5
 picamera==1.13
-Pillow==5.4.1
+Pillow==6.2.0
 protobuf==3.6.1
 pyparsing==2.3.0
 python-dateutil==2.7.5
