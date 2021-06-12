@@ -28,7 +28,7 @@ while(cap.isOpened()):
   frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
   frame = frame.reshape(1, 320, 480, 3)
   # global graph
-  with tf.get_default_graph().as_default():
+  with tf.Graph().as_default():
   	frame = image_convert.model.predict(frame)
   frame = frame.reshape(320, 480)
   frame = frame * 255

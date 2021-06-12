@@ -9,7 +9,7 @@ import pickle
 import image_convert
 import tensorflow as tf
 
-graph = tf.get_default_graph()
+graph = tf.Graph()
 
 class Streamer (threading.Thread):
   def __init__(self, hostname, port):
